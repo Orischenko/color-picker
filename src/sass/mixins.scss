@@ -1,0 +1,54 @@
+// Clear
+@mixin reset-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+//Material icon
+@mixin material-icon {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	line-height: 1em;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+
+// Opacity
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	// IE8 filter
+	$opacity-ie: ($opacity * 100);
+	filter: #{alpha(opacity=$opacity-ie)};
+}
+
+// Transitions
+@mixin transition($transition...) {
+	transition: $transition;
+}
+
+// Box shadow
+@mixin box-shadow {
+	box-shadow: $box__shadow;
+}
+
+// Border radius
+@mixin border-radius {
+	border-radius: 0;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+}

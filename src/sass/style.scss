@@ -1,0 +1,79 @@
+@import "variables";
+@import "mixins";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic,300,100italic,100);
+
+body{
+  font:14px $font-family-base;
+  letter-spacing:.1px;
+  color:$gray;
+  background:$white;
+  margin:0;
+}
+
+a{
+  text-decoration:none;
+  outline:0;
+  @include transition(all .3s ease);
+}
+
+a:hover,
+a:focus{
+  text-decoration:none;
+  outline:0;
+}
+
+h2{
+  margin:0 0 60px;
+  font-size:42px;
+  font-weight:500;
+}
+
+h2, h3, h4, h5 {
+  color: $black;
+}
+
+h3{
+  margin:0 0 30px;
+  font-size:22px;
+  font-weight:500;
+}
+
+#container{
+  padding: 0;
+  width: 1170px;
+  margin: 0 auto;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  outline: none;
+  margin: 55px 0 0 -55px;
+
+  transform: rotate(90deg);
+
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $white;
+    height: 20px;
+    width: 20px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 20px;
+  border-radius: 14px;
+  background: -webkit-linear-gradient(left, #9357cc 0%,#2989d8 50%,#2cc99d 100%);
+}
