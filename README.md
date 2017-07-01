@@ -4,7 +4,7 @@
 ```
 JavaScript
 React
-Redux
+Canvas
 ES6
 Webpack
 Babel
