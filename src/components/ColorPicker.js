@@ -33,6 +33,7 @@ export default class ColorPicker extends Component{
 
         return(
             <div>
+                <h2>Color picker</h2>
                 <div className="palitra-wrapper">
                     { this.getCanvas() }
                     { this.getMarker() }
