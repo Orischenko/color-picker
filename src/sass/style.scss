@@ -51,13 +51,14 @@ h3{
   .color-palitra {
     float: left;
     border-radius: $border-radius;
+    z-index: 1;
   }
 
   .palitra-wrapper {
     position: relative;
     display: inline-block;
     background: $white;
-    padding: 20px 40px 20px 20px;
+    padding: $padding 40px $padding $padding;
     margin-top: 30px;
     border-radius: $border-radius;
     box-shadow: 3px 3px 20px 0 rgba(0,0,0,0.4);
@@ -73,6 +74,11 @@ h3{
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
       border-bottom: 10px solid $white;
+    }
+
+    .color-palitra:nth-child(1) {
+      position: absolute;
+      opacity: 0;
     }
   }
 
@@ -193,4 +199,16 @@ input[type=range]:not(.alpha-input) {
       }
     }
   }
+}
+
+.marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 4px $white;
+  transform: translate($padding/2, $padding/2);
 }

@@ -5,20 +5,21 @@ import RGBValueInput from './RGBValueInput'
 import HEXValueInput from './HEXValueInput'
 import AlphaInput from './AlphaInput'
 import AlphaValueInput from './AlphaValueInput'
+import Marker from './Marker'
 
 const convert = require('../../node_modules/color-convert/conversions');
 
 export default class ColorPicker extends Component{
     state = {
-        coordX: 0,
-        coordY: 0,
+        coordX: 250,
+        coordY: 53,
         canvasWidth: 300,
         canvasHeight: 300,
-        hue: 359,  //0 - 359,
+        hue: 285,  //0 - 359,
         saturation: 100, //0 - 100%
         lightness: 50, //0 - 100%
-        rgb: '255, 0, 0',
-        hex: 'FF0000',
+        rgb: '166, 35, 210',
+        hex: 'A623D2',
         opacity: 1  // 0 - 1
     };
 
@@ -33,6 +34,8 @@ export default class ColorPicker extends Component{
         return(
             <div>
                 <div className="palitra-wrapper">
+                    { this.getCanvas() }
+                    { this.getMarker() }
                     { this.getCanvas() }
                     { this.getHueInput() }
                     <div className="aplpha-wrapper">
@@ -155,6 +158,15 @@ export default class ColorPicker extends Component{
         return(
             <HEXValueInput
                 hexValue={ this.state.hex }
+            />
+        );
+    }
+
+    getMarker() {
+        return(
+            <Marker
+                coordTop={ this.state.coordY }
+                coordLeft={ this.state.coordX }
             />
         );
     }
